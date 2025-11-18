@@ -1,0 +1,10 @@
+.custom-collapse-tocard .ant-collapse-item{
+    border: 1px solid #f0f0f0;
+    background: #fff;
+    border-radius: 8px !important;
+    padding: 10px 16px 20px 10px;
+  }
+  .custom-collapse-tocard .ant-collapse-header{
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 0;
+  }

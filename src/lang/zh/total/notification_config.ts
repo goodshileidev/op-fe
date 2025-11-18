@@ -1,0 +1,18 @@
+export default {
+  "notification.notification_config.notification_config_id":"通知定义",
+  "notification.notification_config.document_id":"一体化表单",
+  "notification.notification_config.document_no":"一体化表单编号",
+  "notification.notification_config.notified_person_type":"被通知人类型",
+  "notification.notification_config.notified_person_receipt_method":"被通知人接受方式",
+  "notification.notification_config.notify_timing":"通知时机",
+  "notification.notification_config.notification_timing_business_description":"通知时机业务说明",
+  "notification.notification_config.notification_detailed_content_template":"通知详细内容模版",
+  "notification.notification_config.is_receipt_record_required":"是否需要记录回执",
+  "notification.notification_config.receipt_method":"回执方式",
+  "notification.notification_config.search":"通知定义-查询数据",
+  "notification.notification_config.create":"通知定义-新建数据",
+  "notification.notification_config.update":"通知定义-更新数据",
+  "notification.notification_config.delete":"通知定义-削除数据",
+  "notification.notification_config.get":"通知定义-取得数据",
+"notification.notification_config":"通知定义",
+}

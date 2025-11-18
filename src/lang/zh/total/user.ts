@@ -1,0 +1,23 @@
+export default {
+  "system.user.user_id": "用户",
+  "system.user.user_name": "姓名",
+  "system.user.employee_number": "手机号",
+  "system.user.user_type": "用户类型",
+  "system.user.signature_file": "预存签名文件",
+  "system.user.avatar_url": "头像",
+  "system.user.password": "密码",
+  "system.user.signature_image_url": "签名文件",
+  "system.user.stamp_image_url": "盖章文件",
+  "system.user.user_status": "用户状态",
+  "system.user.menu_code": "可用菜单",
+  "system.user.has_nfc_code": "已绑定工卡",
+  "system.user.has_signature": "已上传签名",
+  "system.user.search": "用户表-查询数据",
+  "system.user.create": "用户表-新建数据",
+  "system.user.update": "用户表-更新数据",
+  "system.user.delete": "用户表-削除数据",
+  "system.user.get": "用户表-取得数据",
+  "system.user": "用户表",
+  "system.user.nfc_code": "NFC编码",
+
+}

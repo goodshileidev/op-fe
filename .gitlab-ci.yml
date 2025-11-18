@@ -1,0 +1,71 @@
+variables:
+  TAR_NAME: ${YUNLIAN_PROJECT_NAME}_${YUNLIAN_VERSION}_${YUNLIAN_STAGE}-${CI_COMMIT_SHORT_SHA}_${YUNLIAN_DEPLOY_ID}.tar.gz
+
+stages:
+  - setup
+  - version
+  - build
+  - deploy
+
+default:
+  before_script:
+    - echo "切换框架：${YUNLIAN_BUILD_FRAMEWORK}" && [ -n "${YUNLIAN_BUILD_FRAMEWORK}" ] && eval "${YUNLIAN_BUILD_FRAMEWORK}"
+
+setup:
+  stage: setup
+  tags:
+    - prod
+  script:
+    - npm i -d --force or --legacy-peer-deps
+  only:
+    variables:
+      - $YUNLIAN_COMMAND == 'build'
+      - $YUNLIAN_COMMAND == 'build_deploy'
+  artifacts:
+    name: "$CI_PROJECT_NAME-$CI_PROJECT_ID-$CI_PIPELINE_ID-node_modules"
+    paths:
+      - package-lock.json
+  cache:
+    key: "cache-$CI_PROJECT_NAME-$CI_PROJECT_ID-node_modules"
+    paths:
+      - node_modules/
+
+build:
+  stage: build
+  tags:
+    - prod
+  script:
+    - export REACT_APP_ENV=${YUNLIAN_STAGE}
+    - npm run build -- ${YUNLIAN_STAGE}
+    - mv dist dist1
+    - mkdir -p dist/${YUNLIAN_VERSION}
+    - mv dist1/* dist/${YUNLIAN_VERSION}/
+  only:
+    variables:
+      - $YUNLIAN_COMMAND == 'build'
+      - $YUNLIAN_COMMAND == 'build_deploy'
+  artifacts:
+    name: "$CI_PROJECT_NAME-$CI_PROJECT_ID-$CI_PIPELINE_ID-dist"
+    paths:
+      - dist/
+  cache:
+    key: "cache-$CI_PROJECT_NAME-$CI_PROJECT_ID-node_modules"
+    paths:
+      - node_modules/
+    policy: pull
+
+deploy-66:
+  stage: deploy
+  tags:
+    - prod
+  script:
+    - npm run deploy
+  only:
+    variables:
+      - $YUNLIAN_COMMAND == 'deploy'
+      - $YUNLIAN_COMMAND == 'build_deploy'
+  cache:
+    key: "cache-$CI_PROJECT_NAME-$CI_PROJECT_ID-node_modules"
+    paths:
+      - node_modules/
+    policy: pull

@@ -1,0 +1,21 @@
+{
+  "text": "文本输入框",
+  "textarea": "多行文本输入框",
+  "number": "整数输入框",
+  "float": "小数输入框",
+  "select": "选择框",
+  "multiselect": "多值选择框",
+  "checkbox": "复选框",
+  "radio": "单选框",
+  "date": "日期",
+  "time": "时间",
+  "datetime": "日期时间",
+  "daterange": "日期范围",
+  "timerange": "时间范围",
+  "datetimerange": "日期时间范围",
+  "file": "文件上传",
+  "picture": "图片上传",
+  "richedit": "富文本编辑框",
+  "jsonedit": "JSON编辑框",
+  "codeedit": "源码编辑框"
+}

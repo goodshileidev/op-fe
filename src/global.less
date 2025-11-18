@@ -1,0 +1,328 @@
+@import 'react-quill/dist/quill.snow.css';
+@import 'quill-better-table/dist/quill-better-table.css';
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+.ant-pro-sider.ant-layout-sider.ant-pro-sider-fixed {
+  left: unset;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.signature-card-multi-people {
+  width: 160px;
+  height: 120px
+}
+
+input[type="radio"] {
+  opacity: 1; /* 取消灰化 */
+  accent-color: black; /* 确保是黑色 */
+}
+
+input[type="radio"]:disabled {
+  opacity: 1; /* 取消灰化 */
+  accent-color: black; /* 确保是黑色 */
+  cursor: not-allowed; /* 维持禁用状态指针 */
+}
+
+input[type="radio"]:checked:disabled {
+  opacity: 1; /* 取消灰化 */
+  accent-color: black; /* 确保是黑色 */
+  cursor: not-allowed; /* 维持禁用状态指针 */
+}
+
+.qlbt-cell-line {
+  margin: 0;
+  margin-block: 0;
+}
+
+.radio-container {
+  display: inline-flex; /* 使用flex布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  width: 25px; /* 示例宽高 */
+  height: 25px;
+  border: 1px solid #ccc; /* 辅助线方便看效果 */
+  border-radius: 10px;
+  background-color: white;
+}
+
+.checked-radio-container {
+  display: inline-flex; /* 使用flex布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  width: 25px; /* 示例宽高 */
+  height: 25px;
+  border: 1px solid #ccc; /* 辅助线方便看效果 */
+  background-color: black;
+  border-radius: 10px;
+}
+
+.signature-card {
+  width: 160px;
+  height: 120px
+}
+
+.var-no-value-placeholder {
+  width: 80px;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-bottom-color: red;
+  border-bottom-width: 1px;
+  border-bottom-style: dash;
+
+}
+
+.super-rich-editor-container {
+  min-width: 800px;
+  width: 1200px;
+}
+
+.var-button-containers {
+  min-width: 800px;
+}
+
+.signature-hand {
+  width: 160px;
+  height: 120px
+}
+
+.var-container {
+  min-width: 100px;
+  background-color: white !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+
+.text_left {
+  text-align: left !important;
+}
+
+.text_right {
+  text-align: right !important;
+}
+
+
+.template-var-container {
+  background-color: red;
+  color: white;
+}
+
+.template-var-container-no-input {
+  background-color: red;
+  color: white;
+}
+
+.template-var-container-has-input {
+  color: black;
+  font-weight: bold;
+}
+
+.var-date-container {
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.var-value-container {
+  //padding-left: 10px;
+  font-size: 18px;
+}
+
+.var-container-no-input {
+  background-color: red;
+  color: white;
+  padding: 0px;
+}
+
+.var-no-picture-placeholder {
+  width: 120px;
+  height: 90px;
+  //background-repeat: round;
+  background-size: contain;
+  background-position: center;
+  background-image: url('@/assets/images2/no-picture.jpg');
+}
+
+.var-no-file-placeholder {
+  width: 120px;
+  height: 90px;
+  //background-repeat: round;
+  background-size: contain;
+  background-position: center;
+  background-image: url('@/assets/images2/no-file.jpg');
+}
+
+.var-container-no-picture {
+  background-color: red;
+  color: white;
+}
+
+.quill-better-table-wrapper {
+  width: 100%;
+  table {
+    table-layout: auto !important;
+    width: 100% !important;
+  }
+}
+
+table.quill-better-table {
+  table-layout: auto !important;
+  width: 100% !important;
+
+  colgroup {
+    width: auto;
+
+    col {
+      margin: 0 auto;
+    }
+  }
+}
+
+.image-container {
+  max-width: 90%;
+}
+
+.var-container-no-image {
+  max-width: 100%;
+  background-color: red;
+  color: white;
+}
+
+.var-container-no-file {
+  background-color: red;
+  color: white;
+}
+
+.var-container-has-input {
+  color: black;
+  font-weight: bold;
+}
+
+.picture {
+  width: 400px;
+  height: 300px
+}
+
+.ql-container .qlbt-col-tool {
+  display: none;
+}
+
+.var-value-checkbox-label {
+  background-color: white;
+  color: black;
+  font-size: 18px;
+}
+
+.var-value-checkbox {
+  background-color: white;
+  color: black;
+  font-size: 18px;
+}
+
+.default-form-var-toolbar {
+  color: black;
+}
+
+.form-var-toolbar {
+  color: darkblue;
+}
+
+.question-var-toolbar {
+  color: blue
+}
+
+.var-no-value {
+  background-color: red;
+  color: white;
+}
+
+.var-has-value {
+  background-color: green;
+  color: yellow;
+}
+
+@media print {
+  .hide-on-print {
+    display: none;
+  }
+  .ant-layout-header{
+    display: none;
+  }
+  .ant-layout-footer {
+    display: none;
+  }
+  table {
+    width: 100%;
+    max-width: 100%;
+    table-layout: fixed; /* 固定列宽，防止超宽 */
+    word-wrap: break-word; /* 单元格内容自动换行 */
+    border-collapse: collapse;
+  }
+
+  th, td {
+    word-break: auto-phrase;
+    white-space: normal;
+    overflow: hidden;
+  }
+
+  /* 让整个页面内容按比例缩小以适应纸张宽度 */
+  body {
+    zoom: 0.6; /* 根据需要调整 0.8~1 之间的比例 */
+  }
+
+  /* 防止页面横向溢出 */
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+  }
+}
+
+@media (max-width: 768px) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}

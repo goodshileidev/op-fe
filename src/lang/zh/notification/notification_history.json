@@ -1,0 +1,16 @@
+{
+  "notification_history_id":"通知记录",
+  "document_id":"一体化表单",
+  "document_no":"一体化表单编号",
+  "notified_person_name":"被通知人姓名",
+  "notified_person_id":"被通知人",
+  "notified_person_receipt_method":"被通知人接受方式",
+  "notification_datetime":"通知时间",
+  "notification_time_desc":"通知时点",
+  "notification_time_business_description":"通知时点业务说明",
+  "notification_content":"通知详细内容",
+  "receipt_method":"回执方式",
+  "receipt_time":"回执时间",
+  "receipt_content":"回执内容",
+  "is_receipt_required":"是否需要回执",
+}

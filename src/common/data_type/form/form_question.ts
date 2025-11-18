@@ -1,0 +1,34 @@
+export interface FormQuestionType {
+  formQuestionId: string;
+  formSectionId: string;
+  formId: string;
+  documentId: number;
+  formQuestionTemplateId: number;
+  formTemplateId: number;
+  formTemplateVersionId: number;
+  questionNo: string;
+  operationType: string;
+  questionTitleList: string;
+  subQuestionCount: number;
+  subQuestionType: string;
+  inputControlType: string;
+  viewerRoleList: string;
+  editorRoleList: string;
+  detailedDescription: string;
+  subQuestionTemplateHtml: string;
+  remark: string;
+  inputBy: string;
+  inputTime: string;
+  operationMode: string;
+  variableNameList: string;
+  varConfigList: string;
+  varValueList: string;
+  variableHistory: string;
+  isPhotoEvidenceRequired: string;
+  isSignatureEvidenceRequired: string;
+  signatureImageUrl: string;
+  stampImageUrl: string;
+  subQuestionHtml: string[]
+  subQuestionList: any[]
+  varValueMap: any
+}

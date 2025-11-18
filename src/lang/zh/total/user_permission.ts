@@ -1,0 +1,17 @@
+export default {
+  "system.user_permission.user_permission_id": "用户权限",
+  "system.user_permission.biz_type": "货品属性",
+  "system.user_permission.user_biz_type": "业务类型",
+  "system.user_permission.turn_group": "班组",
+  "system.user_permission.position": "岗位",
+  "system.user_permission.employee_number": "手机号",
+  "system.user_permission.user_name": "姓名",
+  "system.user_permission.title": "职务",
+  "system.user_permission.search": "用户权限-查询数据",
+  "system.user_permission.create": "用户权限-新建数据",
+  "system.user_permission.update": "用户权限-更新数据",
+  "system.user_permission.delete": "用户权限-削除数据",
+  "system.user_permission.get": "用户权限-取得数据",
+  "system.user_permission": "用户权限",
+  "system.user_permission.employeeNumber": "手机号",
+}

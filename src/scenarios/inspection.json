@@ -1,0 +1,343 @@
+{
+  "id": "inspection",
+  "name": "industrial_inspection",
+  "displayName": "工业巡检",
+  "description": "用于工业设备巡检和安全检查管理",
+  "icon": "ToolOutlined",
+  "version": "1.0.0",
+  
+  "entities": {
+    "inspection_record": {
+      "type": "inspection_record",
+      "displayName": "巡检记录",
+      "icon": "FileProtectOutlined",
+      "description": "设备巡检和安全检查记录",
+      "fieldMapping": {
+        "title": {
+          "label": "设备名称",
+          "placeholder": "请输入设备名称",
+          "order": 1,
+          "group": "基本信息"
+        },
+        "subtitle": {
+          "label": "设备型号",
+          "placeholder": "请输入设备型号",
+          "order": 2,
+          "group": "基本信息"
+        },
+        "eventDate": {
+          "label": "巡检日期",
+          "placeholder": "选择巡检日期",
+          "order": 3,
+          "group": "基本信息"
+        },
+        "startDate": {
+          "label": "巡检开始时间",
+          "placeholder": "选择开始时间",
+          "order": 4,
+          "group": "时间信息"
+        },
+        "endDate": {
+          "label": "巡检结束时间",
+          "placeholder": "选择结束时间",
+          "order": 5,
+          "group": "时间信息"
+        },
+        "category": {
+          "label": "设备类别",
+          "placeholder": "选择设备类别",
+          "order": 6,
+          "group": "设备信息"
+        },
+        "subcategory": {
+          "label": "设备子类",
+          "placeholder": "选择设备子类",
+          "order": 7,
+          "group": "设备信息"
+        },
+        "location": {
+          "label": "设备位置",
+          "placeholder": "选择或定位设备位置",
+          "helpText": "可使用GPS定位或手动选择",
+          "order": 8,
+          "group": "位置信息"
+        },
+        "tags": {
+          "label": "标签",
+          "placeholder": "添加标签",
+          "helpText": "如:重点设备、高危设备等",
+          "order": 9,
+          "group": "分类信息"
+        }
+      },
+      "customFields": [
+        {
+          "name": "equipmentId",
+          "type": "text",
+          "label": "设备编号",
+          "required": true,
+          "order": 10,
+          "group": "设备信息"
+        },
+        {
+          "name": "qrCode",
+          "type": "text",
+          "label": "二维码",
+          "placeholder": "扫描设备二维码",
+          "order": 11,
+          "group": "设备信息"
+        },
+        {
+          "name": "inspectionType",
+          "type": "select",
+          "label": "巡检类型",
+          "required": true,
+          "config": {
+            "options": [
+              {"label": "日常巡检", "value": "daily"},
+              {"label": "定期检查", "value": "periodic"},
+              {"label": "专项检查", "value": "special"},
+              {"label": "应急检查", "value": "emergency"}
+            ]
+          },
+          "order": 12,
+          "group": "巡检信息"
+        },
+        {
+          "name": "inspectionResult",
+          "type": "select",
+          "label": "巡检结果",
+          "required": true,
+          "config": {
+            "options": [
+              {"label": "正常", "value": "normal"},
+              {"label": "预警", "value": "warning"},
+              {"label": "异常", "value": "abnormal"},
+              {"label": "紧急", "value": "urgent"}
+            ]
+          },
+          "order": 20,
+          "group": "巡检结果"
+        },
+        {
+          "name": "checkItems",
+          "type": "table",
+          "label": "检查项目",
+          "required": true,
+          "config": {
+            "columns": [
+              {"name": "item", "label": "检查项", "type": "text"},
+              {"name": "standard", "label": "标准值", "type": "text"},
+              {"name": "actual", "label": "实际值", "type": "text"},
+              {"name": "result", "label": "结果", "type": "select", "options": [
+                {"label": "合格", "value": "pass"},
+                {"label": "不合格", "value": "fail"}
+              ]}
+            ]
+          },
+          "order": 21,
+          "group": "巡检结果"
+        },
+        {
+          "name": "problems",
+          "type": "textarea",
+          "label": "发现问题",
+          "placeholder": "详细描述发现的问题",
+          "order": 22,
+          "group": "巡检结果"
+        },
+        {
+          "name": "suggestions",
+          "type": "textarea",
+          "label": "处理建议",
+          "placeholder": "提出处理建议",
+          "order": 23,
+          "group": "巡检结果"
+        },
+        {
+          "name": "photos",
+          "type": "image",
+          "label": "现场照片",
+          "required": true,
+          "config": {
+            "maxCount": 20
+          },
+          "order": 30,
+          "group": "现场记录"
+        },
+        {
+          "name": "voiceRecord",
+          "type": "file",
+          "label": "语音记录",
+          "config": {
+            "accept": "audio/*",
+            "maxCount": 5
+          },
+          "order": 31,
+          "group": "现场记录"
+        },
+        {
+          "name": "inspectorSignature",
+          "type": "signature",
+          "label": "巡检员签名",
+          "required": true,
+          "order": 40,
+          "group": "签名确认"
+        },
+        {
+          "name": "supervisorSignature",
+          "type": "signature",
+          "label": "主管签名",
+          "order": 41,
+          "group": "签名确认"
+        }
+      ]
+    }
+  },
+  
+  "terminology": {
+    "entity": "巡检记录",
+    "entities": "巡检记录列表",
+    "template": "巡检模板",
+    "templates": "巡检模板库",
+    "document": "巡检文档",
+    "documents": "巡检文档列表",
+    "form": "巡检表单",
+    "forms": "巡检表单列表",
+    "submit": "提交巡检",
+    "approve": "审核通过",
+    "reject": "需要整改",
+    "viewer": "可查看人员",
+    "editor": "巡检人员",
+    "owner": "负责人",
+    "create_time": "创建时间",
+    "update_time": "更新时间",
+    "status": "巡检状态",
+    "normal": "正常",
+    "warning": "预警",
+    "abnormal": "异常",
+    "urgent": "紧急"
+  },
+  
+  "theme": {
+    "primaryColor": "#fa8c16",
+    "secondaryColor": "#13c2c2",
+    "logo": "/assets/inspection-logo.png"
+  },
+  
+  "roles": {
+    "inspector": {
+      "name": "inspector",
+      "displayName": "巡检员",
+      "permissions": [
+        "inspection_record:view",
+        "inspection_record:create",
+        "inspection_record:edit"
+      ]
+    },
+    "supervisor": {
+      "name": "supervisor",
+      "displayName": "主管",
+      "permissions": [
+        "inspection_record:view",
+        "inspection_record:approve",
+        "inspection_record:assign"
+      ]
+    },
+    "manager": {
+      "name": "manager",
+      "displayName": "经理",
+      "permissions": [
+        "inspection_record:*",
+        "template:*",
+        "report:*"
+      ]
+    }
+  },
+  
+  "features": {
+    "electronicSignature": true,
+    "gpsLocation": true,
+    "offlineMode": true,
+    "photoCapture": true,
+    "voiceRecording": true,
+    "qrCodeScanning": true,
+    "dataExport": {
+      "enabled": true,
+      "config": {
+        "formats": ["pdf", "excel"]
+      }
+    },
+    "realTimeAlerts": true,
+    "statisticsReport": true,
+    "maintenanceReminder": true
+  },
+  
+  "workflows": [
+    {
+      "id": "daily_inspection",
+      "name": "日常巡检流程",
+      "description": "设备日常巡检的标准流程",
+      "steps": [
+        {
+          "id": "scan_qr",
+          "name": "扫描设备二维码",
+          "assignee": "inspector"
+        },
+        {
+          "id": "fill_form",
+          "name": "填写巡检表单",
+          "assignee": "inspector"
+        },
+        {
+          "id": "take_photos",
+          "name": "拍照记录",
+          "assignee": "inspector"
+        },
+        {
+          "id": "submit",
+          "name": "提交巡检",
+          "assignee": "inspector"
+        },
+        {
+          "id": "review",
+          "name": "主管审核",
+          "assignee": "supervisor",
+          "optional": true
+        }
+      ]
+    },
+    {
+      "id": "abnormal_handling",
+      "name": "异常处理流程",
+      "description": "发现异常情况的处理流程",
+      "steps": [
+        {
+          "id": "report",
+          "name": "上报异常",
+          "assignee": "inspector"
+        },
+        {
+          "id": "evaluate",
+          "name": "评估严重程度",
+          "assignee": "supervisor"
+        },
+        {
+          "id": "assign_task",
+          "name": "分配处理任务",
+          "assignee": "supervisor"
+        },
+        {
+          "id": "handle",
+          "name": "处理异常",
+          "assignee": "inspector"
+        },
+        {
+          "id": "verify",
+          "name": "验证结果",
+          "assignee": "supervisor"
+        }
+      ]
+    }
+  ]
+}

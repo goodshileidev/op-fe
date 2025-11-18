@@ -1,0 +1,11 @@
+{
+  "string": "短文字",
+  "text": "长文字",
+  "integer": "整数",
+  "float": "浮点数",
+  "date": "日期时间",
+  "time": "日期时间",
+  "datetime": "日期时间",
+  "boolean": "布尔(是/否)",
+  "enum": "枚举"
+}

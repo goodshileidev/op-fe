@@ -1,0 +1,351 @@
+{
+  "id": "shipping",
+  "name": "port_shipping",
+  "displayName": "港口航运",
+  "description": "用于港口船舶作业和货运管理",
+  "icon": "RocketOutlined",
+  "version": "1.0.0",
+  
+  "entities": {
+    "ship_operation": {
+      "type": "ship_operation",
+      "displayName": "船舶作业",
+      "icon": "CarOutlined",
+      "description": "船舶靠泊作业记录",
+      "fieldMapping": {
+        "title": {
+          "label": "船名",
+          "placeholder": "请输入船名",
+          "order": 1,
+          "group": "船舶信息"
+        },
+        "subtitle": {
+          "label": "货名",
+          "placeholder": "请输入货名",
+          "order": 2,
+          "group": "货物信息"
+        },
+        "eventDate": {
+          "label": "作业日期",
+          "placeholder": "选择作业日期",
+          "order": 3,
+          "group": "时间信息"
+        },
+        "startDate": {
+          "label": "靠泊时间",
+          "placeholder": "选择靠泊时间",
+          "order": 4,
+          "group": "时间信息"
+        },
+        "endDate": {
+          "label": "离港时间",
+          "placeholder": "选择离港时间",
+          "order": 5,
+          "group": "时间信息"
+        },
+        "category": {
+          "label": "贸易类型",
+          "placeholder": "选择内外贸类型",
+          "order": 6,
+          "group": "业务分类"
+        },
+        "subcategory": {
+          "label": "船舶类型",
+          "placeholder": "选择船舶类型",
+          "order": 7,
+          "group": "船舶信息"
+        },
+        "location": {
+          "label": "泊位",
+          "placeholder": "选择泊位",
+          "order": 8,
+          "group": "位置信息"
+        }
+      },
+      "customFields": [
+        {
+          "name": "shipId",
+          "type": "text",
+          "label": "船舶编号",
+          "required": true,
+          "order": 10,
+          "group": "船舶信息"
+        },
+        {
+          "name": "imoNumber",
+          "type": "text",
+          "label": "IMO编号",
+          "placeholder": "国际海事组织编号",
+          "order": 11,
+          "group": "船舶信息"
+        },
+        {
+          "name": "shipFlag",
+          "type": "text",
+          "label": "船旗",
+          "order": 12,
+          "group": "船舶信息"
+        },
+        {
+          "name": "shipLength",
+          "type": "number",
+          "label": "船长(米)",
+          "config": {
+            "min": 0,
+            "precision": 2
+          },
+          "order": 13,
+          "group": "船舶参数"
+        },
+        {
+          "name": "shipWidth",
+          "type": "number",
+          "label": "船宽(米)",
+          "config": {
+            "min": 0,
+            "precision": 2
+          },
+          "order": 14,
+          "group": "船舶参数"
+        },
+        {
+          "name": "deadweight",
+          "type": "number",
+          "label": "载重吨(吨)",
+          "config": {
+            "min": 0,
+            "precision": 2
+          },
+          "order": 15,
+          "group": "船舶参数"
+        },
+        {
+          "name": "cargoType",
+          "type": "select",
+          "label": "货物类型",
+          "required": true,
+          "config": {
+            "options": [
+              {"label": "煤炭", "value": "coal"},
+              {"label": "矿石", "value": "ore"},
+              {"label": "化工品", "value": "chemical"},
+              {"label": "粮食", "value": "grain"},
+              {"label": "集装箱", "value": "container"},
+              {"label": "其他", "value": "other"}
+            ]
+          },
+          "order": 20,
+          "group": "货物信息"
+        },
+        {
+          "name": "cargoWeight",
+          "type": "number",
+          "label": "货物重量(吨)",
+          "required": true,
+          "config": {
+            "min": 0,
+            "precision": 2
+          },
+          "order": 21,
+          "group": "货物信息"
+        },
+        {
+          "name": "loadingMethod",
+          "type": "select",
+          "label": "装卸方式",
+          "config": {
+            "options": [
+              {"label": "装货", "value": "loading"},
+              {"label": "卸货", "value": "unloading"},
+              {"label": "过驳", "value": "transhipment"}
+            ]
+          },
+          "order": 22,
+          "group": "作业信息"
+        },
+        {
+          "name": "operationDetails",
+          "type": "table",
+          "label": "作业明细",
+          "config": {
+            "columns": [
+              {"name": "time", "label": "时间", "type": "datetime"},
+              {"name": "operation", "label": "操作", "type": "text"},
+              {"name": "quantity", "label": "数量", "type": "number"},
+              {"name": "operator", "label": "操作人", "type": "text"}
+            ]
+          },
+          "order": 30,
+          "group": "作业记录"
+        },
+        {
+          "name": "weatherCondition",
+          "type": "textarea",
+          "label": "天气情况",
+          "placeholder": "记录作业时的天气状况",
+          "order": 31,
+          "group": "作业环境"
+        },
+        {
+          "name": "safetyCheck",
+          "type": "checkbox",
+          "label": "安全检查项",
+          "config": {
+            "options": [
+              {"label": "消防设备检查", "value": "fire_equipment"},
+              {"label": "救生设备检查", "value": "life_saving"},
+              {"label": "防污染措施", "value": "anti_pollution"},
+              {"label": "系泊检查", "value": "mooring"}
+            ]
+          },
+          "order": 40,
+          "group": "安全检查"
+        },
+        {
+          "name": "remarks",
+          "type": "rich_text",
+          "label": "备注说明",
+          "order": 50,
+          "group": "其他"
+        },
+        {
+          "name": "attachments",
+          "type": "file",
+          "label": "相关附件",
+          "config": {
+            "maxCount": 10
+          },
+          "order": 51,
+          "group": "其他"
+        },
+        {
+          "name": "captainSignature",
+          "type": "signature",
+          "label": "船长签名",
+          "required": true,
+          "order": 60,
+          "group": "签名确认"
+        },
+        {
+          "name": "portRepSignature",
+          "type": "signature",
+          "label": "港方代表签名",
+          "required": true,
+          "order": 61,
+          "group": "签名确认"
+        }
+      ]
+    }
+  },
+  
+  "terminology": {
+    "entity": "作业文档",
+    "entities": "作业文档列表",
+    "template": "作业模板",
+    "templates": "作业模板库",
+    "document": "船舶文档",
+    "documents": "船舶文档列表",
+    "form": "作业表单",
+    "forms": "作业表单列表",
+    "submit": "提交作业",
+    "approve": "审核通过",
+    "reject": "退回修改",
+    "viewer": "可查看人员",
+    "editor": "作业人员",
+    "owner": "负责人",
+    "create_time": "创建时间",
+    "update_time": "更新时间",
+    "status": "作业状态"
+  },
+  
+  "theme": {
+    "primaryColor": "#1890ff",
+    "secondaryColor": "#722ed1",
+    "logo": "/assets/shipping-logo.png"
+  },
+  
+  "roles": {
+    "operator": {
+      "name": "operator",
+      "displayName": "作业员",
+      "permissions": [
+        "ship_operation:view",
+        "ship_operation:create",
+        "ship_operation:edit"
+      ]
+    },
+    "supervisor": {
+      "name": "supervisor",
+      "displayName": "主管",
+      "permissions": [
+        "ship_operation:view",
+        "ship_operation:approve"
+      ]
+    },
+    "manager": {
+      "name": "manager",
+      "displayName": "经理",
+      "permissions": [
+        "ship_operation:*",
+        "template:*",
+        "report:*"
+      ]
+    }
+  },
+  
+  "features": {
+    "electronicSignature": true,
+    "gpsLocation": true,
+    "offlineMode": false,
+    "dataExport": {
+      "enabled": true,
+      "config": {
+        "formats": ["pdf", "excel", "word"]
+      }
+    },
+    "reportGeneration": true,
+    "statisticsAnalysis": true,
+    "weatherIntegration": true,
+    "tideIntegration": true
+  },
+  
+  "workflows": [
+    {
+      "id": "ship_operation_flow",
+      "name": "船舶作业流程",
+      "description": "标准船舶作业流程",
+      "steps": [
+        {
+          "id": "arrival_notice",
+          "name": "到港通知",
+          "assignee": "operator"
+        },
+        {
+          "id": "berth_assignment",
+          "name": "分配泊位",
+          "assignee": "supervisor"
+        },
+        {
+          "id": "safety_check",
+          "name": "安全检查",
+          "assignee": "operator"
+        },
+        {
+          "id": "loading_operation",
+          "name": "装卸作业",
+          "assignee": "operator"
+        },
+        {
+          "id": "completion_check",
+          "name": "完工检查",
+          "assignee": "supervisor"
+        },
+        {
+          "id": "departure",
+          "name": "离港放行",
+          "assignee": "supervisor"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "user_history_id":"用户变更记录",
+  "user_id":"用户",
+  "user_name":"姓名",
+  "employee_number":"手机号",
+  "user_type":"用户类型",
+  "signature_file":"预存签名文件",
+  "avatar_url":"头像URL",
+  "password":"密码",
+  "signature_image_url":"签名文件URL",
+  "stamp_image_url":"盖章文件URL",
+  "user_status":"用户状态",
+}

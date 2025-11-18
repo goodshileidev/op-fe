@@ -1,0 +1,12 @@
+{
+  "page": "页面",
+  "external_api": "外部接口",
+  "internal_api": "内部接口",
+  "report": "报表",
+  "report_indicator": "报表指标",
+  "groovy_script": "Groovy脚本",
+  "js_script": "Javascript脚本",
+  "cron_task": "定时任务",
+  "notification": "系统通知",
+  "sql": "SQL"
+}

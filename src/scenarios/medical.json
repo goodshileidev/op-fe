@@ -1,0 +1,284 @@
+{
+  "id": "medical",
+  "name": "medical_research",
+  "displayName": "医疗调研",
+  "description": "用于医疗机构的患者调研和病历记录管理",
+  "icon": "MedicineBoxOutlined",
+  "version": "1.0.0",
+  
+  "entities": {
+    "patient_record": {
+      "type": "patient_record",
+      "displayName": "患者记录",
+      "icon": "UserOutlined",
+      "description": "患者病历和就诊记录",
+      "fieldMapping": {
+        "title": {
+          "label": "患者姓名",
+          "placeholder": "请输入患者姓名",
+          "helpText": "患者的真实姓名",
+          "order": 1,
+          "group": "基本信息"
+        },
+        "subtitle": {
+          "label": "主要症状",
+          "placeholder": "请输入主要症状",
+          "order": 2,
+          "group": "基本信息"
+        },
+        "eventDate": {
+          "label": "就诊日期",
+          "placeholder": "选择就诊日期",
+          "order": 3,
+          "group": "基本信息"
+        },
+        "startDate": {
+          "label": "入院日期",
+          "placeholder": "选择入院日期",
+          "order": 4,
+          "group": "住院信息"
+        },
+        "endDate": {
+          "label": "出院日期",
+          "placeholder": "选择出院日期",
+          "order": 5,
+          "group": "住院信息"
+        },
+        "category": {
+          "label": "就诊科室",
+          "placeholder": "选择就诊科室",
+          "helpText": "患者就诊的医院科室",
+          "order": 6,
+          "group": "医疗信息"
+        },
+        "subcategory": {
+          "label": "疾病分类",
+          "placeholder": "选择疾病分类",
+          "order": 7,
+          "group": "医疗信息"
+        },
+        "location": {
+          "label": "医疗机构",
+          "placeholder": "选择医疗机构",
+          "order": 8,
+          "group": "基本信息"
+        }
+      },
+      "customFields": [
+        {
+          "name": "patientId",
+          "type": "text",
+          "label": "患者ID",
+          "required": true,
+          "order": 10,
+          "group": "基本信息"
+        },
+        {
+          "name": "age",
+          "type": "number",
+          "label": "年龄",
+          "required": true,
+          "config": {
+            "min": 0,
+            "max": 150
+          },
+          "order": 11,
+          "group": "基本信息"
+        },
+        {
+          "name": "gender",
+          "type": "select",
+          "label": "性别",
+          "required": true,
+          "config": {
+            "options": [
+              {"label": "男", "value": "male"},
+              {"label": "女", "value": "female"}
+            ]
+          },
+          "order": 12,
+          "group": "基本信息"
+        },
+        {
+          "name": "bloodType",
+          "type": "select",
+          "label": "血型",
+          "config": {
+            "options": [
+              {"label": "A型", "value": "A"},
+              {"label": "B型", "value": "B"},
+              {"label": "AB型", "value": "AB"},
+              {"label": "O型", "value": "O"}
+            ]
+          },
+          "order": 13,
+          "group": "医疗信息"
+        },
+        {
+          "name": "diagnosis",
+          "type": "textarea",
+          "label": "诊断结果",
+          "required": true,
+          "order": 20,
+          "group": "诊疗信息"
+        },
+        {
+          "name": "treatment",
+          "type": "rich_text",
+          "label": "治疗方案",
+          "order": 21,
+          "group": "诊疗信息"
+        },
+        {
+          "name": "prescription",
+          "type": "table",
+          "label": "处方药品",
+          "config": {
+            "columns": [
+              {"name": "medicine", "label": "药品名称", "type": "text"},
+              {"name": "dosage", "label": "剂量", "type": "text"},
+              {"name": "frequency", "label": "频次", "type": "text"},
+              {"name": "duration", "label": "疗程", "type": "text"}
+            ]
+          },
+          "order": 22,
+          "group": "诊疗信息"
+        },
+        {
+          "name": "doctorSignature",
+          "type": "signature",
+          "label": "医生签名",
+          "required": true,
+          "order": 30,
+          "group": "签名"
+        },
+        {
+          "name": "medicalImages",
+          "type": "image",
+          "label": "医学影像",
+          "config": {
+            "maxCount": 10
+          },
+          "order": 31,
+          "group": "附件"
+        }
+      ]
+    }
+  },
+  
+  "terminology": {
+    "entity": "患者记录",
+    "entities": "患者记录列表",
+    "template": "病历模板",
+    "templates": "病历模板库",
+    "document": "病历文档",
+    "documents": "病历文档列表",
+    "form": "问诊表单",
+    "forms": "问诊表单列表",
+    "submit": "提交病历",
+    "approve": "医生审核",
+    "reject": "退回修改",
+    "viewer": "可查看医生",
+    "editor": "可编辑护士",
+    "owner": "主治医生",
+    "create_time": "创建时间",
+    "update_time": "更新时间",
+    "status": "病历状态",
+    "draft": "草稿",
+    "in_progress": "填写中",
+    "pending_review": "待审核",
+    "approved": "已审核",
+    "completed": "已完成"
+  },
+  
+  "theme": {
+    "primaryColor": "#1890ff",
+    "secondaryColor": "#52c41a",
+    "logo": "/assets/medical-logo.png"
+  },
+  
+  "roles": {
+    "doctor": {
+      "name": "doctor",
+      "displayName": "医生",
+      "permissions": [
+        "patient_record:view",
+        "patient_record:create",
+        "patient_record:edit",
+        "patient_record:approve",
+        "patient_record:delete"
+      ]
+    },
+    "nurse": {
+      "name": "nurse",
+      "displayName": "护士",
+      "permissions": [
+        "patient_record:view",
+        "patient_record:create",
+        "patient_record:edit"
+      ]
+    },
+    "admin": {
+      "name": "admin",
+      "displayName": "管理员",
+      "permissions": [
+        "patient_record:*",
+        "template:*",
+        "user:*",
+        "system:*"
+      ]
+    }
+  },
+  
+  "features": {
+    "electronicSignature": true,
+    "gpsLocation": false,
+    "offlineMode": true,
+    "photoCapture": true,
+    "dataExport": {
+      "enabled": true,
+      "config": {
+        "formats": ["pdf", "excel", "csv"],
+        "includeDiagnostics": true
+      }
+    },
+    "multiLanguage": true,
+    "auditLog": true,
+    "dataEncryption": true,
+    "realTimeSync": true
+  },
+  
+  "workflows": [
+    {
+      "id": "patient_admission",
+      "name": "患者入院流程",
+      "description": "新患者入院的标准流程",
+      "steps": [
+        {
+          "id": "register",
+          "name": "患者登记",
+          "assignee": "nurse",
+          "optional": false
+        },
+        {
+          "id": "diagnosis",
+          "name": "医生诊断",
+          "assignee": "doctor",
+          "optional": false
+        },
+        {
+          "id": "treatment_plan",
+          "name": "制定治疗方案",
+          "assignee": "doctor",
+          "optional": false
+        },
+        {
+          "id": "hospitalization",
+          "name": "办理住院",
+          "assignee": "nurse",
+          "optional": true
+        }
+      ]
+    }
+  ]
+}

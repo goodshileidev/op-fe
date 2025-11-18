@@ -1,0 +1,12 @@
+{
+  "notification_config_id":"通知定义",
+  "document_id":"一体化表单",
+  "document_no":"一体化表单编号",
+  "notified_person_type":"被通知人类型",
+  "notified_person_receipt_method":"被通知人接受方式",
+  "notify_timing":"通知时机",
+  "notification_timing_business_description":"通知时机业务说明",
+  "notification_detailed_content_template":"通知详细内容模版",
+  "is_receipt_record_required":"是否需要记录回执",
+  "receipt_method":"回执方式",
+}

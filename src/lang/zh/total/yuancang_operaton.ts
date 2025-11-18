@@ -1,0 +1,15 @@
+export default {
+  "operation.yuancang_operaton.yuancang_operaton_id": "圆仓作业表单",
+  "operation.yuancang_operaton.data_date": "数据日期",
+  "operation.yuancang_operaton.turn_group": "班组",
+  "operation.yuancang_operaton.turn_no": "班次",
+  "operation.yuancang_operaton.form_name": "表单名称",
+  "operation.yuancang_operaton.document_name": "一体化表单名称",
+  "operation.yuancang_operaton.operate_status": "作业状态",
+  "operation.yuancang_operaton.search": "圆仓作业表单-查询数据",
+  "operation.yuancang_operaton.create": "圆仓作业表单-新建数据",
+  "operation.yuancang_operaton.update": "圆仓作业表单-更新数据",
+  "operation.yuancang_operaton.delete": "圆仓作业表单-削除数据",
+  "operation.yuancang_operaton.get": "圆仓作业表单-取得数据",
+  "operation.yuancang_operaton": "圆仓作业表单",
+}

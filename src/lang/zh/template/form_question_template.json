@@ -1,0 +1,20 @@
+{
+  "form_question_template_id":"表单问题模版",
+  "form_section_template_id":"表单区块模版",
+  "form_template_id":"表单模版",
+  "question_no":"问题编号",
+  "question_title_list":"问题名称",
+  "sub_question_count":"子问题数量",
+  "sub_question_type":"子问题类型",
+  "input_control_type":"输入控件类型",
+  "variable_name_list":"变量名称列表",
+  "var_config_list":"变量定义列表",
+  "detailed_description":"详细说明",
+  "viewer_role_list":"阅览角色列表",
+  "editor_role_list":"编辑角色列表",
+  "operation_mode":"操作方式",
+  "sub_question_template_html":"子问题模版HTML",
+  "is_photo_evidence_required":"是否需要拍照留痕",
+  "is_signature_evidence_required":"是否需要签字留痕",
+  "bind_to_cargo": "绑定到货种"
+}

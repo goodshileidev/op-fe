@@ -1,0 +1,15 @@
+export default {
+  "operation.monthly_security_check.monthly_security_check_id":"月度安全检查",
+  "operation.monthly_security_check.check_year_month":"检查年月",
+  "operation.monthly_security_check.form_name":"表单名称",
+  "operation.monthly_security_check.biz_type":"业务类型",
+  "operation.monthly_security_check.operate_status":"作业状态",
+  "operation.monthly_security_check.turn_group":"班组",
+  "operation.monthly_security_check.checking_turn_group":"检查班组",
+  "operation.monthly_security_check.search":"月度安全检查-查询数据",
+  "operation.monthly_security_check.create":"月度安全检查-新建数据",
+  "operation.monthly_security_check.update":"月度安全检查-更新数据",
+  "operation.monthly_security_check.delete":"月度安全检查-削除数据",
+  "operation.monthly_security_check.get":"月度安全检查-取得数据",
+"operation.monthly_security_check":"月度安全检查",
+}

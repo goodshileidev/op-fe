@@ -1,0 +1,15 @@
+export default {
+  "template.document_template_rule.document_template_rule_id":"一体化表单创建规则",
+  "template.document_template_rule.document_template_no":"一体化表单模版编号",
+  "template.document_template_rule.document_template_name":"一体化表单模版名称",
+  "template.document_template_rule.cargo_name":"货品名称",
+  "template.document_template_rule.operation_type":"作业类型",
+  "template.document_template_rule.biz_type":"货品属性",
+  "template.document_template_rule.domestic_foreign_trade_type":"内外贸",
+  "template.document_template_rule.search":"一体化表单创建规则-查询数据",
+  "template.document_template_rule.create":"一体化表单创建规则-新建数据",
+  "template.document_template_rule.update":"一体化表单创建规则-更新数据",
+  "template.document_template_rule.delete":"一体化表单创建规则-削除数据",
+  "template.document_template_rule.get":"一体化表单创建规则-取得数据",
+"template.document_template_rule":"一体化表单创建规则",
+}

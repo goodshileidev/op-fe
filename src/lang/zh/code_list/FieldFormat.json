@@ -1,0 +1,13 @@
+{
+  "float1": "一位小数",
+  "float2": "两位小数",
+  "integer": "整数",
+  "yyyy-MM-dd hhmmss": "年月日时分秒",
+  "yyyy-MM-dd hhmm": "年月日时分",
+  "yyyy-MM-dd hh": "年月日时",
+  "hhmmss": "时分秒",
+  "hhmm": "时分",
+  "hh": "小时",
+  "integer_by_thousand": "千分整数",
+  "integer_by_10thousand": "万分整数"
+}

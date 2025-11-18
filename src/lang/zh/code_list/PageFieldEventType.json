@@ -1,0 +1,9 @@
+{
+  "enter": "进入",
+  "load": "开始加载",
+  "loaded": "加载完成",
+  "blur": "失去焦点",
+  "click": "点击",
+  "dbClick": "双击",
+  "changed": "变化"
+}
