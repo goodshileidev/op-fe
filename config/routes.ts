@@ -513,6 +513,41 @@ export default [
   },
 
   {
+    path: '/config',
+    icon: 'setting',
+    name: 'config',
+    routes: [
+      {
+        path: '/config/industry_config/industry_config_table',
+        name: 'industry_config_table',
+        icon: 'smile',
+        component: './config/industry_config/industry_config_table'
+      }, //行业配置 列表
+      {
+        path: '/config/industry_config/industry_config_edit_page/:configId',
+        name: 'industry_config_edit_page',
+        hideInMenu: "true",
+        icon: 'smile',
+        component: './config/industry_config/industry_config_edit_page',
+      }, //行业配置 编辑
+      {
+        path: '/config/industry_config/industry_config_detail_page/:configId',
+        name: 'industry_config_detail_page',
+        hideInMenu: "true",
+        icon: 'smile',
+        component: './config/industry_config/industry_config_detail_page',
+      }, //行业配置 详情
+      {
+        path: '/config/industry_config_version/industry_config_version_table',
+        name: 'industry_config_version_table',
+        icon: 'smile',
+        hideInMenu: true,
+        component: './config/industry_config_version/industry_config_version_table'
+      }, //配置版本 列表
+    ]
+  },
+
+  {
     name: 'account',
     icon: 'user',
     hideInMenu: "true",
