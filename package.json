@@ -35,8 +35,6 @@
     "tsc": "tsc --noEmit"
   },
   "dependencies": {
-    "@sinochem/tools-deploy": "2.0.2",
-    "@sinochem/tools-postversion": "^1.4.5",
     "@ant-design/icons": "^4.8.1",
     "@ant-design/plots": "^2.1.5",
     "@ant-design/pro-components": "^2.6.44",
@@ -44,6 +42,8 @@
     "@antv/l7-maps": "^2.20.13",
     "@antv/l7-react": "^2.4.3",
     "@monaco-editor/react": "^4.6.0",
+    "@sinochem/tools-deploy": "2.0.2",
+    "@sinochem/tools-postversion": "^1.4.5",
     "@types/uuid": "^10.0.0",
     "@umijs/route-utils": "^2.2.2",
     "antd": "^5.12.7",
@@ -51,7 +51,9 @@
     "classnames": "^2.5.1",
     "crypto-js": "^4.2.0",
     "dayjs": "^1.11.10",
+    "html-react-parser": "^5.2.10",
     "i18next": "^23.12.2",
+    "js-cookie": "^2.2.1",
     "numeral": "^2.0.6",
     "omit.js": "^2.0.2",
     "querystring": "^0.2.1",
@@ -68,8 +70,7 @@
     "react-vant": "3.3.5",
     "sortablejs": "^1.15.3",
     "umi-serve": "^1.9.11",
-    "uuid": "^10.0.0",
-    "js-cookie": "^2.2.1"
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@ant-design/pro-cli": "^2.1.5",
