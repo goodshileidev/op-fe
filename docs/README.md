@@ -2,7 +2,7 @@
 
 **文档编号**: DOC-INDEX
 **创建时间**: 2025-11-14 22:03
-**最后修改**: 2025-11-26 12:01
+**最后修改**: 2025-11-26 12:10
 **执行模型**: claude-sonnet-4-5 (claude-sonnet-4-5-20250929)
 **文档状态**: 生效中
 
@@ -14,6 +14,7 @@
 |------|------------|---------|
 | 2025-11-14 22:03 | Claude AI | 创建文档导航 |
 | 2025-11-26 12:01 | claude-sonnet-4-5 | 按照官方指南重构文档结构 |
+| 2025-11-26 12:10 | claude-sonnet-4-5 | 整理文档到标准目录，清理重复和归档 |
 
 ---
 
@@ -92,7 +93,7 @@ docs/
 
 | 文档 | 说明 | 状态 |
 |------|------|------|
-| 暂无 | 待添加架构文档 | 📝 规划中 |
+| **README.md** | 架构文档索引和概览 | ✅ 生效中 |
 
 ### 使用场景
 
@@ -100,12 +101,13 @@ docs/
 - 🔧 技术选型参考
 - 📐 模块划分和依赖关系
 
-### 建议文档
+### 核心内容
 
-- 系统架构图
-- 技术栈选型说明
-- 模块划分和依赖关系
-- 数据流设计
+**系统架构概览**:
+- 技术栈说明（React + Umi + TypeScript + Ant Design）
+- 分层架构（展示层 → 业务逻辑层 → 数据访问层 → 后端服务）
+- 核心模块（表单管理、模板管理、业务操作、系统管理）
+- 架构原则（分层、模块化、可维护性、性能优化）
 
 ---
 
@@ -125,6 +127,7 @@ docs/
 | **05-form-renderer.md** | 表单渲染器设计 | ✅ 生效中 |
 | **06-scenario-configuration.md** | 场景配置设计 | ✅ 生效中 |
 | **08-backward-compatibility.md** | 向后兼容性设计 | ✅ 生效中 |
+| **scenario-config-spec.md** | 场景配置规范（v2.0） | ✅ 生效中 |
 
 ### 使用场景
 
@@ -152,8 +155,9 @@ docs/
 | 文档 | 说明 | 状态 |
 |------|------|------|
 | **KICKOFF_TASKS.md** | Week 1 实施任务清单 ⭐ | ✅ 生效中 |
-| **implementation-roadmap.md** | 实施路线图 | ✅ 生效中 |
+| **implementation-roadmap.md** | 实施路线图（6个月） | ✅ 生效中 |
 | **07-data-migration.md** | 数据迁移方案 | ✅ 生效中 |
+| **poc-guide.md** | POC 实施指南（v2.0） | ✅ 生效中 |
 
 ### 使用场景
 
@@ -258,23 +262,20 @@ docs/
 
 存放已完成或不再使用的文档。
 
+| 文档 | 说明 | 状态 |
+|------|------|------|
+| architecture-review-notes.md | 架构评审笔记（仅供参考） | 📦 已归档 |
+
 ### deprecated/ - 已废弃文档
 
 存放已被新方案替代的旧文档。
 
-| 文档 | 说明 | 替代方案 |
+| 文档/目录 | 说明 | 替代方案 |
 |------|------|---------|
-| generic-data-model.md | 通用数据模型（旧版） | 02-需求/PRODUCT_TRANSFORMATION_PLAN.md |
+| generic-data-model.md | 通用数据模型（v1.0 旧版） | 02-需求/PRODUCT_TRANSFORMATION_PLAN.md |
 | form-template-refactor.md | 表单模板重构（旧版） | 04-设计/ 目录下的重构文档 |
-| universal-transformation-plan.md | 通用化方案（旧版） | 02-需求/PRODUCT_TRANSFORMATION_PLAN.md |
-
-### refactor/ - 重构原始文档
-
-原始重构设计文档，已复制到 04-设计/ 目录。
-
-### v2/ - v2 版本文档
-
-v2 版本相关文档。
+| universal-transformation-plan.md | 通用化方案（v1.0 旧版） | 02-需求/PRODUCT_TRANSFORMATION_PLAN.md |
+| refactor-old/ | 原始重构设计文档（已迁移） | 已复制到 04-设计/ 目录 |
 
 ---
 
