@@ -5,7 +5,7 @@
  * @date 2025-11-26
  */
 
-import request from '@/common/request';
+import request from '@/common/axios';
 import { IndustryConfigType, IndustryConfigSearchType, IndustryConfigVersionType, IndustryConfigVersionSearchType } from '@/common/data_type/config/industry_config';
 
 /**
