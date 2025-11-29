@@ -1,8 +1,10 @@
 import i18n from "i18next"
 import {initReactI18next} from "react-i18next";
 import zhLang from './zh/translation.ts'
+import enLang from './en/translation.ts'
+import jaLang from './ja/translation.ts'
 // import LanguageDetector from 'i18next-browser-languagedetector';
-const langDefaultValue = 'zh' || window.localStorage.getItem('lang') || 'zh'
+const langDefaultValue = window.localStorage.getItem('lang') || 'zh'
 window.localStorage.setItem('lang', langDefaultValue)
 console.debug("langDefaultValue", langDefaultValue)
 i18n
@@ -24,6 +26,12 @@ i18n
       zh: {
         translation: zhLang
       },
+      en: {
+        translation: enLang
+      },
+      ja: {
+        translation: jaLang
+      }
     }
   })
 export default i18n;
